@@ -1,0 +1,61 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Black Ops One", system-ui;
+}
+
+body,
+.snake {
+  background-color: #5a755f;
+}
+
+#gameBoard {
+  display: grid;
+  background-color: #dee3df;
+  grid-template-columns: repeat(20, 20px);
+  grid-template-rows: repeat(20, 20px);
+}
+
+.game-border-1 {
+  border: #9bbd9c solid 20px;
+  border-radius: 15px;
+  box-shadow: inset 0 0 0 30px #9bbd9c;
+}
+
+.game-border-2 {
+  border: #5a755f solid 15px;
+  border-radius: 15px;
+  box-shadow: inset 0 0 0 20px #5a755f;
+}
+
+/*   */
+
+.scores {
+  display: flex;
+  justify-content: space-between;
+  color: #9bbd9c;
+}
+
+.hight-score {
+  display: none;
+}
+
+.snake {
+  border: #5a5a5a 1px dotted;
+}
+
+.food {
+  background-color: #9bbd9c;
+  border: #9bbd9c 5px solid;
+}
+
+#logo {
+  position: absolute;
+  margin-top: 80px;
+  width: 400px;
+  height: 400px;
+}
