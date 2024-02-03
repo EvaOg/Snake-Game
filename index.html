@@ -6,9 +6,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:wght@300&display=swap"
       rel="stylesheet"
     />
+
     <title>Snake game</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -17,13 +18,42 @@
       <div class="scores">
         <h1 id="score">000</h1>
       </div>
+
       <div class="game-border-1">
+        <img id="logo" src="snake.png" alt="snake-logo" />
         <div class="game-border-2">
           <div id="gameBoard"></div>
         </div>
       </div>
+
+      <div id="description-start">
+        <p>Press space to start</p>
+      </div>
+
+      <div class="arrows-container">
+        <div class="arrow-row">
+          <bottom onclick="moveup()"><img id="up" src="arrow.svg" /></bottom>
+        </div>
+
+        <div class="arrow-row" id="row">
+          <bottom onclick="moveleft()"
+            ><img id="left" src="arrow.svg"
+          /></bottom>
+
+          <bottom onclick="start()" id="start">START</bottom>
+
+          <bottom onclick="moveright()"
+            ><img id="right" src="arrow.svg"
+          /></bottom>
+        </div>
+        <div class="arrow-row">
+          <bottom onclick="movedown()">
+            <img id="down" src="arrow.svg"
+          /></bottom>
+        </div>
+      </div>
     </div>
-    <img id="logo" src="snake.png" alt="snake-logo" />
+
     <script src="script.js"></script>
   </body>
 </html>

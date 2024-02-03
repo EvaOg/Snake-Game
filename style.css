@@ -5,7 +5,7 @@ body {
   justify-content: center;
   height: 100vh;
   margin: 0;
-  font-family: "Black Ops One", system-ui;
+  font-family: "Averia Sans Libre", sans-serif;
 }
 
 body,
@@ -55,7 +55,80 @@ body,
 
 #logo {
   position: absolute;
-  margin-top: 80px;
+  margin-top: 15px;
+  margin-left: 15px;
   width: 400px;
   height: 400px;
+}
+
+#description-start {
+  color: #9bbd9c;
+  text-align: center;
+  font-size: 19px;
+}
+
+.arrows-container {
+  display: none;
+  height: fit-content;
+  margin: 50px 0;
+}
+
+.arrow-row {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+#row {
+  justify-content: space-evenly;
+}
+
+#up {
+  transform: rotate(-90deg);
+}
+
+#left {
+  transform: rotate(180deg);
+}
+
+#down {
+  transform: rotate(90deg);
+}
+
+#start {
+  color: #9bbd9c;
+  padding-top: 10px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .arrows-container {
+    display: block;
+  }
+  .game-border-1 {
+    max-width: 360px;
+  }
+  .game-border-1 {
+    max-width: 360px;
+    max-height: 360px;
+  }
+
+  #logo {
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 15px;
+    width: 280px;
+    height: 280px;
+  }
+
+  #gameBoard {
+    grid-template-columns: repeat(20, 14px);
+    grid-template-rows: repeat(20, 14px);
+  }
+
+  #description-start {
+    display: none;
+  }
 }

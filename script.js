@@ -1,6 +1,7 @@
 const board = document.getElementById("gameBoard");
 const logo = document.getElementById("logo");
 const score = document.getElementById("score");
+const description = document.getElementById("description-start");
 
 let snake = [{ x: 10, y: 10 }];
 let food = generateInt();
@@ -89,7 +90,7 @@ function move() {
 
 function startGame() {
   gameStarted = true;
-
+  description.style.display = "none";
   logo.style.display = "none";
   gameInterval = setInterval(() => {
     move();
@@ -120,6 +121,12 @@ function handleKeyPress(event) {
         direction = "right";
         break;
     }
+  }
+}
+
+function start() {
+  if (!gameStarted) {
+    startGame();
   }
 }
 
@@ -164,9 +171,26 @@ function stopGame() {
   clearInterval(gameInterval);
   gameStarted = false;
   logo.style.display = "block";
+  description.style.display = "block";
 }
 
 function updateScore() {
   const currentScore = snake.length - 1;
   score.textContent = currentScore.toString().padStart(3, "0");
+}
+
+function moveup() {
+  direction = "up";
+}
+
+function movedown() {
+  direction = "down";
+}
+
+function moveleft() {
+  direction = "left";
+}
+
+function moveright() {
+  direction = "right";
 }
